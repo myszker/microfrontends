@@ -1,0 +1,10 @@
+{
+  "private": true,
+  "scripts": {
+    "start": "\"cd shell && npm start\" ",
+    "install": "cd shell && npm i && cd ../shop1 && npm i "
+  },
+  "devDependencies": {
+    "prettier": "2.8.4"
+  }
+}

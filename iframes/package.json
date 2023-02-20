@@ -1,0 +1,13 @@
+{
+  "private": true,
+  "scripts": {
+    "start": "concurrently --names \"SHELL,SHOP1,SHOP2\" -c \"bgYellow.black.bold,blue.bold,magenta.bold\" \"cd shell && npm start\" \"cd shop1 && npm start\" \"cd shop2 && npm start\"",
+    "install": "cd shell && npm i && cd ../shop1 && npm i && cd ../shop2 && npm i"
+  },
+  "dependencies": {
+    "concurrently": "^7.3.0"
+  },
+  "devDependencies": {
+    "prettier": "2.8.4"
+  }
+}

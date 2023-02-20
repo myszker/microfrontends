@@ -1,0 +1,115 @@
+<html>
+	<head>
+		<title>Web components</title>
+		<style>
+			.appbar {
+				-webkit-font-smoothing: antialiased;
+				text-size-adjust: 100%;
+				color-scheme: light;
+				font-size: 1rem;
+				line-height: 1.5;
+				letter-spacing: 0px;
+				font-weight: 400;
+				--google-font-color-materialiconstwotone: none;
+				font-family: Arial;
+				transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+				box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 4px -1px, rgba(0, 0, 0, 0.14) 0px 4px 5px 0px, rgba(0, 0, 0, 0.12) 0px 1px 10px 0px;
+				display: flex;
+				flex-direction: column;
+				width: 100%;
+				box-sizing: border-box;
+				flex-shrink: 0;
+				position: static;
+				background-color: rgb(25, 118, 210);
+				color: rgb(255, 255, 255);
+				height:64px;
+				margin-bottom:64px;
+				width:100%;
+			}
+			.container {
+				-webkit-font-smoothing: antialiased;
+				font-family: Roboto, Helvetica, Arial, sans-serif;
+				font-weight: 400;
+				font-size: 1rem;
+				line-height: 1.5;
+				letter-spacing: 0.00938em;
+				color: rgba(0, 0, 0, 0.87);
+				width: 100%;
+				margin-left: auto;
+				box-sizing: border-box;
+				margin-right: auto;
+				display: block;
+				padding-left: 24px;
+				padding-right: 24px;
+				max-width: 1200px;
+			}
+
+
+			.grid {
+				-webkit-font-smoothing: antialiased;
+				font-family: Roboto, Helvetica, Arial, sans-serif;
+				font-weight: 400;
+				font-size: 1rem;
+				line-height: 1.5;
+				letter-spacing: 0.00938em;
+				color: rgba(0, 0, 0, 0.87);
+				box-sizing: border-box;
+				display: flex;
+				flex-wrap: wrap;
+				flex-direction: row;
+				margin-top: -16px;
+				width: calc(100% + 16px);
+			}
+			.left-column {
+				-webkit-font-smoothing: antialiased;
+				color: rgba(0, 0, 0, 0.87);
+				font-family: Roboto, Helvetica, Arial, sans-serif;
+				font-weight: 400;
+				font-size: 1rem;
+				line-height: 1.5;
+				letter-spacing: 0.00938em;
+				box-sizing: border-box;
+				margin: 0;
+				flex-direction: row;
+				flex-basis: 66.666667%;
+				-webkit-box-flex: 0;
+				flex-grow: 0;
+				max-width: 66.666667%;
+				padding-top: 16px;
+				padding-left: 16px;
+			}
+			.right-column {
+				-webkit-font-smoothing: antialiased;
+				-webkit-text-size-adjust: 100%;
+				color: #1A2027;
+				font-size: 1rem;
+				line-height: 1.5;
+				letter-spacing: 0;
+				font-weight: 400;
+				box-sizing: border-box;
+				margin: 0;
+				flex-direction: row;
+				flex-basis: 33.333333%;
+				-webkit-box-flex: 0;
+				flex-grow: 0;
+				max-width: 33.333333%;
+				padding-top: 16px;
+				padding-left: 16px;
+			}
+		</style>
+	</head>
+	<body>
+	<div class="appbar"></div>
+	<div class="container">
+		<div class="grid">
+			<div class="left-column">
+				<products-list></products-list>
+			</div>
+			<div class="right-column">
+				<div id="root"></div>
+			</div>
+		</div>
+	</div>
+	</body>
+	<script defer="defer" src="shop1.js"></script>
+</html>

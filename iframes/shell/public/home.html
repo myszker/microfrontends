@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" href="/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Home</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      font-family: sans-serif;
+    }
+
+    .panelTitle {
+      margin: 0;
+      font-family: "Roboto","Helvetica","Arial",sans-serif;
+      font-weight: 400;
+      font-size: 1.5rem;
+      line-height: 1.334;
+      letter-spacing: 0em;
+      margin-bottom: 0.35em;
+    }
+
+    .card {
+      background-color: #fff;
+      color: rgba(0, 0, 0, 0.87);
+      -webkit-transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+      transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+      border-radius: 4px;
+      box-shadow: 0px 2px 1px -1px rgb(0 0 0 / 20%), 0px 1px 1px 0px rgb(0 0 0 / 14%), 0px 1px 3px 0px rgb(0 0 0 / 12%);
+      overflow: hidden;
+      margin-bottom:5px;
+    }
+
+    .cardContent {
+      padding: 16px 16px 24px 16px;
+    }
+
+    .cardContainer {
+      padding: 0 3px 3px 3px;
+    }
+  </style>
+</head>
+<body>
+  <div class="cardContainer">
+    <div class="card">
+      <div class="cardContent">
+        <div class="panel">
+          <div class="panelHeader">
+            <h1 class="panelTitle">Home</h1>
+            <span class="panelIcon panelIconHTML" title="HTML"></span>
+          </div>
+          <div class="panelBody">
+            <p>Ten panel jest niezależną aplikacją osadzoną w iframe.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    window.addEventListener('load', () => {
+      window.parent?.postMessage({ type: 'updateIframeHeight', height: document.body.offsetHeight + 16 }, '*');
+    });
+  </script>
+</body>
+</html>
